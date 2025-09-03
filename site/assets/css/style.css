@@ -137,7 +137,6 @@ header.scrolled {
     color: var(--light-text);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     padding: 0.5rem 0;
-    align-items: flex-start;
 }
 
 
@@ -152,10 +151,10 @@ header.scrolled {
 
 .site-logo {
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
     text-decoration: none;
     transition: color 0.3s ease, font-size 0.3s ease, margin 0.3s ease, height 0.3s ease, padding 0.3s ease;
-    margin-bottom: 0;
+    margin-bottom: 15px;
     padding: 10px;
 }
 
