@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de Bordo</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#" class="site-logo"> 
+                <img src="../../assets/css/img/logo.jpg" alt="Logo Cultura Brasileira" class="site-logo-img">
+                <span class="site-logo-text">Cultura Brasileira</span>
+            </a>
+            <ul>
+
+                <li><a href="../../../index.html">Página Inicial</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="diario.html" class="active">Diário de Bordo</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main class="section-padding">
+        <h1>Nosso Diário de Bordo!</h1>
+        <h1 class="section-title">Realizar Sorteio!</h1>
+        <section class="content-wrapper">
+            <h2>O próximo a ser escolhido!</h2>
+            <p>Utilize o botão abaixo para sortear um participante da lista. Cada participante será sorteado apenas uma
+                vez, até que aperte o botão "Reiniciar" para recomeçar o sorteio.</p>
+
+            <hr style="margin: 40px 0;">
+
+            <div class="sorteio-area">
+                <div class="result-box" id="sorteioResultado">
+                    <p>Clique em "Sortear" para aparecer o nome!</p>
+                </div>
+
+                <div class="sorteio-buttons">
+                    <button type="button" class="btn-primary" id="btnSortear">Sortear</button>
+                    <button type="button" class="btn-primary" id="btnReiniciar">Reiniciar</button>
+                </div>
+
+                <div class="participantes-inscritos" style="margin-top: 40px;">
+                    <h3>Participantes Adicionados (<span id="numParticipantes">0</span>):</h3>
+                    <ul id="listaParticipantes" class="participant-list">
+
+                    </ul>
+                    <h3>Participantes Já Sorteados:</h3>
+                    <ul id="listaSorteados" class="participant-list sorted">
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Brasil in Cena. Todos os direitos reservados.</p>
+    </footer>
+
+
+    <script src="../css/js/script.js"></script>
+</body>
+
+</html>
