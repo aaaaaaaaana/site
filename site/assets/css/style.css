@@ -95,25 +95,12 @@ ul li {
 }
 
 
-.list-with-bullets li {
-    padding-left: 25px;
-}
-
-.list-with-bullets li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--accent-color);
-    font-weight: 600;
-    font-size: 1.2em;
-    line-height: 1;
-}
 
 
 header {
     background-color: var(--background-light);
     color: var(--text-color-primary);
-    padding: 1rem 0;
+    padding: 1% 0;
     position: sticky;
     top: 0;
     width: 100%;
@@ -124,11 +111,10 @@ header {
 
 header nav {
     max-width: var(--max-content-width);
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    
 }
 
 
@@ -154,8 +140,8 @@ header.scrolled {
     align-items: center;
     text-decoration: none;
     transition: color 0.3s ease, font-size 0.3s ease, margin 0.3s ease, height 0.3s ease, padding 0.3s ease;
-    margin-bottom: 15px;
     padding: 10px;
+    margin-left: 5%;
 }
 
 .site-logo-img {
@@ -183,16 +169,7 @@ header.scrolled .site-logo {
     margin-bottom: 0;
 }
 
-header.scrolled .site-logo-img {
-    width: 35px;
-    height: auto;
-    margin-right: 8px;
-}
 
-header.scrolled .site-logo-text {
-    font-size: 1.5rem;
-    color: var(--light-text);
-}
 
 header.scrolled nav ul li a {
     color: var(--light-text);
@@ -211,21 +188,24 @@ nav ul {
     justify-content: center;
     margin-top: 0;
     flex-wrap: wrap;
+    padding-top: 20px;
 }
 
 nav ul li {
     margin: 0 20px;
+
 }
 
 nav ul li a {
     color: var(--dark-text);
     text-decoration: none;
     font-weight: 500;
-    padding: 8px 0;
+    padding-top: 8px 0;
     transition: color 0.3s ease, border-bottom 0.3s ease;
     font-size: 1.05rem;
     display: block;
     position: relative;
+    
 }
 
 nav ul li a:hover,
@@ -233,6 +213,18 @@ nav ul li a.active {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
 }
+
+
+footer {
+    background-color: var(--background-dark);
+    color: var(--light-text);
+    text-align: center;
+    padding: 2.5rem 0;
+    font-size: 0.95rem;
+    font-weight: 300;
+    margin-top: auto;
+}
+
 
 
 
@@ -406,132 +398,10 @@ main {
 
 
 
-.event-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 60px;
-}
-
-.event-item {
-    background-color: #ffffff;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 30px;
-    box-shadow: 0 5px 15px var(--shadow-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-
-.event-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.event-item h3 {
-    color: var(--primary-color);
-    font-size: 1.7rem;
-    margin-bottom: 15px;
-}
-
-.event-item p {
-    margin-bottom: 10px;
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--text-color-secondary);
-}
 
 
 
 
-
-
-.form-group {
-    margin-bottom: 25px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: var(--dark-text);
-    font-size: 1.05rem;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    font-size: 1rem;
-    font-family: var(--font-body);
-    color: var(--dark-text);
-    background-color: #fcfcfc;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: var(--accent-color);
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.15);
-}
-
-.contact-form button {
-    padding: 15px 40px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-top: 25px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contact-info {
-    margin-top: 60px;
-    padding-top: 40px;
-    border-top: 1px solid var(--border-color);
-    text-align: center;
-}
-
-.contact-info p {
-    margin-bottom: 12px;
-    font-size: 1.05rem;
-    color: var(--text-color-secondary);
-}
-
-.contact-info a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.contact-info a:hover {
-    color: var(--accent-color);
-    text-decoration: underline;
-}
-
-
-
-
-
-footer {
-    background-color: var(--background-dark);
-    color: var(--light-text);
-    text-align: center;
-    padding: 2.5rem 0;
-    font-size: 0.95rem;
-    font-weight: 300;
-    margin-top: auto;
-}
 
 
 
@@ -635,19 +505,19 @@ footer {
     padding-left: 15px;
 }
 
-.participant-list li::before {
+.participante-lista li::before {
     content: none;
 }
 
-.participant-list li:hover {
+.participante-lista li:hover {
     background-color: #f9fbfb;
 }
 
-.participant-list li:last-child {
+.participante-lista li:last-child {
     border-bottom: none;
 }
 
-.participant-list.sorted li {
+.participante-lista.sorteado li {
     color: #aeb6bf;
     text-decoration: line-through;
 }
@@ -655,333 +525,8 @@ footer {
 
 
 
-@media (max-width: 992px) {
-    h1 {
-        font-size: 3.2rem;
-    }
 
-    h2 {
-        font-size: 2.4rem;
-    }
 
-    h3 {
-        font-size: 1.9rem;
-    }
 
-    p {
-        font-size: 1rem;
-    }
 
-    .hero h2 {
-        font-size: 3.2rem;
-    }
 
-    .hero p {
-        font-size: 1.1rem;
-    }
-
-    .section-title {
-        font-size: 2.6rem;
-    }
-
-    .section-title::after {
-        width: 100px;
-    }
-
-    .image-text-pair {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image-text-pair .image-container {
-        max-width: 80%;
-        margin-bottom: 30px;
-    }
-
-    .image-text-pair .text-container {
-        max-width: 90%;
-        text-align: center;
-    }
-
-    .event-list {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-
-    .event-item h3 {
-        font-size: 1.5rem;
-    }
-
-    .sorteio-area .content-wrapper {
-        padding: 40px;
-    }
-
-    .result-box h3 {
-        font-size: 2rem;
-    }
-
-    .result-box p strong {
-        font-size: 2.8rem;
-    }
-}
-
-@media (max-width: 768px) {
-    header .header-content {
-        padding: 0 15px;
-    }
-
-    .site-logo {
-        font-size: 1.8rem;
-        margin-bottom: 10px;
-    }
-
-    nav ul {
-        margin-top: 10px;
-    }
-
-    nav ul li {
-        margin: 5px 10px;
-    }
-
-    nav ul li a {
-        font-size: 0.95rem;
-        padding: 6px 0;
-    }
-
-    .hero {
-        min-height: 60vh;
-        padding-top: 150px;
-    }
-
-    .hero h2 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .btn-primary {
-        padding: 12px 30px;
-        font-size: 1rem;
-    }
-
-    .section-padding {
-        padding: 60px 15px;
-    }
-
-    .section-title {
-        font-size: 2.2rem;
-        margin-bottom: 40px;
-    }
-
-    .section-title::after {
-        width: 80px;
-    }
-
-    .content-wrapper {
-        padding: 30px;
-    }
-
-    .content-block {
-        margin-bottom: 40px;
-    }
-
-    .content-image {
-        margin: 25px auto;
-    }
-
-    .image-text-pair {
-        margin-bottom: 60px;
-    }
-
-    .image-text-pair .image-container {
-        max-width: 95%;
-    }
-
-    .image-text-pair .text-container {
-        max-width: 100%;
-    }
-
-
-    .event-list {
-        gap: 30px;
-        margin-top: 30px;
-    }
-
-    .event-item {
-        padding: 25px;
-    }
-
-    .event-item h3 {
-        font-size: 1.4rem;
-    }
-
-    .form-group {
-        margin-bottom: 20px;
-    }
-
-    .form-group label {
-        font-size: 1rem;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-        padding: 10px;
-        font-size: 0.95rem;
-    }
-
-    .contact-form button {
-        padding: 14px 30px;
-        font-size: 1rem;
-    }
-
-    .contact-info {
-        margin-top: 40px;
-        padding-top: 30px;
-    }
-
-    .contact-info p {
-        font-size: 0.95rem;
-    }
-
-    .sorteio-area .content-wrapper {
-        padding: 30px;
-    }
-
-    .result-box {
-        padding: 25px;
-        margin-bottom: 25px;
-    }
-
-    .result-box p {
-        font-size: 1.1rem;
-    }
-
-    .result-box h3 {
-        font-size: 1.8rem;
-    }
-
-    .result-box p strong {
-        font-size: 2.2rem;
-    }
-
-    .sorteio-buttons {
-        gap: 20px;
-        margin-bottom: 30px;
-        flex-direction: column;
-    }
-
-    .sorteio-buttons .btn-primary {
-        width: 90%;
-    }
-
-    .participantes-inscritos h3 {
-        font-size: 1.7rem;
-    }
-
-    .participant-list li {
-        padding: 12px 20px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2.8rem;
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    h3 {
-        font-size: 1.6rem;
-    }
-
-    .site-logo {
-        font-size: 1.6rem;
-    }
-
-    nav ul li {
-        margin: 5px 8px;
-    }
-
-    nav ul li a {
-        font-size: 0.9rem;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 0.9rem;
-    }
-
-    .btn-primary {
-        padding: 10px 25px;
-        font-size: 0.9rem;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
-    }
-
-    .section-title::after {
-        width: 60px;
-        bottom: -10px;
-    }
-
-    .content-wrapper {
-        padding: 20px;
-    }
-
-    .content-block {
-        margin-bottom: 30px;
-    }
-
-    .event-list {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .event-item {
-        padding: 20px;
-    }
-
-    .event-item h3 {
-        font-size: 1.3rem;
-    }
-
-    .contact-form button {
-        width: 100%;
-    }
-
-    .sorteio-area .content-wrapper {
-        padding: 20px;
-    }
-
-    .result-box h3 {
-        font-size: 1.5rem;
-    }
-
-    .result-box p strong {
-        font-size: 1.8rem;
-    }
-
-    .sorteio-buttons .btn-primary {
-        width: 100%;
-        margin-bottom: 8px;
-    }
-
-    .participantes-inscritos h3 {
-        font-size: 1.5rem;
-    }
-
-    .participant-list li {
-        padding: 10px 15px;
-        font-size: 0.95rem;
-    }
-}
