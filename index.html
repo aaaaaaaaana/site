@@ -11,10 +11,17 @@
 <body>
     <header>
         <nav>
-            <a href="#" class="site-logo"> 
+            <a href="#" class="site-logo">
                 <img src="site/assets/css/img/logo.jpg" alt="Logo" class="site-logo-img">
                 <span class="site-logo-text">Brasil in Cine</span>
             </a>
+
+            <button class="hamburger-menu" aria-label="Abrir Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
             <ul>
                 <li><a href="index.html" class="active">Página Inicial</a></li>
                 <li><a href="site/assets/pages/sobre.html">Sobre</a></li>
@@ -25,35 +32,47 @@
     </header>
 
     <main>
+
         <section class="hero">
             <h2>Descubra a riqueza e a alma do Brasil</h2>
             <p>Uma imersão nas cores, sons e histórias que moldam nossa identidade única.</p>
 
         </section>
 
-        <section class="section-padding content-block">
-            <img
-                src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/carnavalriodesfilecampea-25.jpg?w=1900&h=1267"
-                alt="Carnaval do Rio de Janeiro"
-                class="content-image">
+        <section class="hero-internal">
 
-                <div class="text-block">
-                    <h2>O Carnaval: A Maior Celebração Popular</h2>
-                    <p>O Carnaval brasileiro é mundialmente conhecido pela sua energia contagiante, fantasias elaboradas
-                        e
-                        desfiles espetaculares. Mais do que uma festa, é uma manifestação cultural profunda que expressa
-                        a
-                        alegria, a criatividade e a diversidade do povo brasileiro. Do samba no Rio de Janeiro aos trios
-                        elétricos de Salvador e o frevo de Olinda, cada região celebra de uma forma única.</p>
-                    <p>Milhões de pessoas se jogam na folia, criando um espetáculo de união e celebração que atrai
-                        turistas
-                        de todas as partes do globo. É um verdadeiro palco a céu aberto da nossa cultura.</p>
-                </div>
+            <nav class="internal-nav">
+                <ul>
+                    <li><a href="#introducao">Introdução</a></li>
+                    <li><a href="#culinaria">Culinária</a></li>
+                    <li><a href="#musica">Música</a></li>
+                    <li><a href="#artesanato">Artesanato</a></li>
+                    <li><a href="#dancas">Danças</a></li>
+                </ul>
+            </nav>
         </section>
 
         <section class="section-padding content-block">
-            <img src="https://www.ogastronomo.com.br/upload/705030785-descubra-os-diferentes-tipos-de-feijoada.jpg" alt="Prato típico de feijoada brasileira"
-                class="content-image">
+            <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/carnavalriodesfilecampea-25.jpg?w=1900&h=1267"
+                alt="Carnaval do Rio de Janeiro" class="content-image">
+
+            <div class="text-block">
+                <h2>O Carnaval: A Maior Celebração Popular</h2>
+                <p>O Carnaval brasileiro é mundialmente conhecido pela sua energia contagiante, fantasias elaboradas
+                    e
+                    desfiles espetaculares. Mais do que uma festa, é uma manifestação cultural profunda que expressa
+                    a
+                    alegria, a criatividade e a diversidade do povo brasileiro. Do samba no Rio de Janeiro aos trios
+                    elétricos de Salvador e o frevo de Olinda, cada região celebra de uma forma única.</p>
+                <p>Milhões de pessoas se jogam na folia, criando um espetáculo de união e celebração que atrai
+                    turistas
+                    de todas as partes do globo. É um verdadeiro palco a céu aberto da nossa cultura.</p>
+            </div>
+        </section>
+
+        <section class="section-padding content-block">
+            <img src="https://www.ogastronomo.com.br/upload/705030785-descubra-os-diferentes-tipos-de-feijoada.jpg"
+                alt="Prato típico de feijoada brasileira" class="content-image">
             <div class="text-block">
                 <h2>Sabores Que Contam Histórias</h2>
                 <p>A culinária brasileira é um reflexo delicioso da nossa formação histórica, com influências indígenas,
@@ -66,8 +85,8 @@
         </section>
 
         <section class="section-padding content-block">
-            <img src="https://ogimg.infoglobo.com.br/in/22992124-651-e10/FT1086A/36772867_SCRio-de-Janeiro-RJ-07-08-2008Joao-Gilberto-toca-no-showA-noite-do-amor-do-sorr.jpg" alt="Show de Bossa Nova com um saxofonista e cantor"
-                class="content-image">
+            <img src="https://ogimg.infoglobo.com.br/in/22992124-651-e10/FT1086A/36772867_SCRio-de-Janeiro-RJ-07-08-2008Joao-Gilberto-toca-no-showA-noite-do-amor-do-sorr.jpg"
+                alt="Show de Bossa Nova com um saxofonista e cantor" class="content-image">
             <div class="text-block">
                 <h2>A Alma Sonora do Brasil</h2>
                 <p>A música é, sem dúvida, um dos pilares da cultura brasileira. Nossos ritmos são tão diversos quanto
@@ -84,6 +103,9 @@
     <footer>
         <p>&copy; 2025 Brasil in Cena. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="site/assets/css/js/script.js"></script>
+
 </body>
 
 </html>

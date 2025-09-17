@@ -1,5 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navUl = document.querySelector('nav ul');
+    const header = document.querySelector('header');
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    hamburgerMenu.addEventListener('click', () => {
+        navUl.classList.toggle('active');
+        hamburgerMenu.classList.toggle('active'); 
+
+        if (navUl.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navUl.classList.contains('active')) { 
+                navUl.classList.remove('active');
+                hamburgerMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    });
+
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+
+
+    
     const listaParticipantes = document.getElementById('listaParticipantes');
     const listaSorteados = document.getElementById('listaSorteados');
     const numParticipantesSpan = document.getElementById('numParticipantes');
@@ -142,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const header = document.querySelector('header');
 
         window.addEventListener('scroll', function () {
-            if (window.scrollY > 50) { 
+            if (window.scrollY > 50) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
@@ -152,5 +191,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
+
+
+
+
     loadData();
 });
+
+
+
+
+
