@@ -5,30 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre a Cultura Brasileira</title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../styles/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
 </head>
 
 <body>
     <header class="header-internal">
-        <nav>
-            <a href="#" class="site-logo">
-                <img src="../../assets/css/img/logo.jpg" alt="Logo" class="site-logo-img">
-                <span class="site-logo-text">Brasil in Cine</span>
-            </a>
+        <nav id="navbar">
+            <i class="fa-solid fa-feather-pointed" id="nav_logo"> Brasil in Cena</i>
+            <ul id="nav_list">
+                <li class="nav-item">
+                    <a href="../../../index.html">Ínicio</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="sobre.html">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                    <a href="diario.html">Diário de Bordo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contato.html">Contato</a>
+                </li>
+            </ul>
 
-            <button class="hamburger-menu" aria-label="Abrir Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <button class="btn-default">
+                Regiões
             </button>
 
-            <ul>
-                <li><a href="../../../index.html">Página Inicial</a></li>
-                <li><a href="sobre.html" class="active">Sobre</a></li>
-                <li><a href="diario.html">Diário de Bordo</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="../../../index.html">Ínicio</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="sobre.html">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                    <a href="diario.html">Diário de Bordo</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="contato.html">Contato</a>
+                </li>
+            </ul>
+        </div>
+
     </header>
 
     <main>
@@ -49,13 +84,9 @@
         <section id="introducao" class="section-padding content-block highlight-section">
             <div class="text-block">
                 <h2>A Alma do Brasil em Cada Detalhe</h2>
-                <p>A cultura brasileira é uma das mais ricas e diversas do mundo, fruto da miscigenação de povos
-                    indígenas, europeus (principalmente portugueses) e africanos, além de contribuições de imigrantes de
-                    diversas partes do planeta. Essa fusão resultou em manifestações únicas que celebram a vida, a fé e
-                    a alegria, refletindo um espírito de resiliência e criatividade sem igual.</p>
-                <p>Nossas tradições se manifestam na arquitetura das cidades históricas, na exuberância de nossas festas
-                    populares e no calor humano que acolhe a todos. É um convite constante à descoberta e ao
-                    encantamento.</p>
+                <p>O projeto Brasil in Cena nasceu de uma roda de conversa e percebemos que a verdadeira riqueza do nosso país vai muito além do que se vê nos livros ou nas telas. Ela vive nos detalhes e nas histórias que, muitas vezes, não são contadas.</p>
+                <p>Foi a partir dessa visão que decidimos mergulhar na cultura regional. Nosso objetivo é ir além da superfície e fazer com que as pessoas se conectem de verdade com aquilo que nos forma. Queremos sentir a força de um tempero nordestino, vibrar com a energia de um samba de rua e ouvir a história que vive nos relatos de quem mora na Amazônia.</p>
+                <p>Acreditamos que, ao valorizar a força de uma culinária regional, a vibração de uma música brasileira e a profundidade de uma história local, fortalecemos os laços que nos unem. Afinal, cada pedaço dessa cultura imensa é também uma parte de quem somos, e essa redescoberta é o que nos aproxima uns aos outros.</p>
             </div>
             <img src="../../assets/img/foto-miscelania-cultura.jpg"
                 alt="Pessoas celebrando a diversidade cultural brasileira" class="content-image-right">
@@ -144,32 +175,7 @@
         <p>&copy; 2025 Brasil in Cena. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-
-        window.addEventListener('scroll', function () {
-            const nav = document.querySelector('.internal-nav');
-            const heroInternal = document.querySelector('.hero-internal');
-            if (nav) {
-                if (window.scrollY >= heroInternal.offsetHeight - nav.offsetHeight) {
-                    nav.classList.add('sticky');
-                } else {
-                    nav.classList.remove('sticky');
-                }
-            }
-        });
-
-        document.querySelectorAll('.internal-nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-
-    <script src="../css/js/script.js"></script>
+    <script src="../styles/js/script.js"></script>
 
 </body>
 

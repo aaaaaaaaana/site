@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <i class="fa-solid fa-feather-pointed" id="nav_logo"> Brasil in Cena</i>
+            <ul id="nav_list">
+                <li class="nav-item">
+                    <a href="../../../index.html">Ínicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sobre.html">Sobre Nós</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="diario.html">Diário de Bordo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contato.html">Contato</a>
+                </li>
+            </ul>
+
+            <button class="btn-default">
+                Regiões
+            </button>
+
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="../../../index.html">Ínicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sobre.html">Sobre Nós</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="diario.html">Diário de Bordo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contato.html">Contato</a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section id="home">
+            <div id="cta">
+
+                <h1 class="title">
+                    Login Para acessar
+                    <span>Diário de Bordo</span>
+                </h1>
+
+
+                <div class="wrapper">
+                    <div class="card-switch">
+                        <label class="switch">
+                            <input type="checkbox" class="toggle">
+                            <span class="slider"></span>
+                            <span class="card-side"></span>
+                            <div class="flip-card__inner">
+                                <div class="flip-card__front">
+                                    <div class="title">Log in</div>
+                                    <form class="flip-card__form" action="">
+
+                                        <input 
+                                        class="flip-card__input" 
+                                        name="email" 
+                                        placeholder="Email" 
+                                        type="email"
+                                        onchange="validateFields()">
+
+                                        <input 
+                                        class="flip-card__input" 
+                                        name="password" 
+                                        placeholder="Password"
+                                        type="password"
+                                        onchange="validateFields()">
+
+                                        <a href="diario.html">
+                                            <button class="flip-card__btn" disabled="true">Let`s go!</button>
+                                        </a>
+
+                                    </form>
+                                </div>
+
+
+                                <div class="flip-card__back">
+                                    <div class="title">Sign up</div>
+                                    <form class="flip-card__form" action="">
+
+                                        <input 
+                                        class="flip-card__input" 
+                                        placeholder="Name" 
+                                        type="name"
+                                        onchange="validateFields()">
+
+                                        <input 
+                                        class="flip-card__input" 
+                                        name="email" 
+                                        placeholder="Email" 
+                                        type="email"
+                                        onchange="validateFields()">
+
+                                        <input 
+                                        class="flip-card__input" 
+                                        name="password" 
+                                        placeholder="Password"
+                                        type="password"
+                                        onchange="validateFields()">
+
+                                        <button class="flip-card__btn">Confirm!</button>
+
+                                    </form>
+                                </div>
+
+
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Brasil in Cena. Todos os direitos reservados.</p>
+    </footer>
+
+
+    <script src="../styles/js/script.js"></script>
+</body>
+
+</html>
