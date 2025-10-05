@@ -1,5 +1,6 @@
 
 
+
 #menu {
     display: flex;
     flex-direction: column;
@@ -16,14 +17,17 @@
     margin-top: 32px;
 }
 
+
+
 .dish {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     border-radius: 20px;
-    gap: 18px;
+    justify-content: space-between;
+    gap: 20px;
     width: 25%;
-    padding: 20px;
+    padding: 15px;
     background-color: var(--color-neutral-0);
     box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -40,9 +44,11 @@
 }
 
 .dish-image {
-    height: 70%;
-    width: 115%;
+    height: 190px;
+    width: calc(100% + 40px);
     padding: 0;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
 }
 
 .dish-heart {
@@ -61,6 +67,7 @@
 }
 
 .dish-description {
+    flex-grow: 1;
     color: #434343;
     text-align: justify;
 }
@@ -95,3 +102,6 @@
         text-align: center;
     }
 }
+
+
+

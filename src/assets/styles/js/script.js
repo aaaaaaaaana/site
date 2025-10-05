@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function () {
     $('#mobile_btn').on('click', function () {
         $('#mobile_menu').toggleClass('active');
@@ -34,8 +37,16 @@ $(document).ready(function () {
         $(navItems[activeSectionIndex]).addClass('active');
     });
 
+
+
     ScrollReveal().reveal('#cta', {
         origin: 'left',
+        duration: 2000,
+        distance: '20%'
+    });
+
+    ScrollReveal().reveal('#brasil', {
+        origin: 'right',
         duration: 2000,
         distance: '20%'
     });
@@ -61,68 +72,58 @@ $(document).ready(function () {
 
 
 
-function validateFields() {
-    const emailValid = isEmailValid();
-    document.getElementById("recover-password-button").disabled = !emailValid;
+let email = document.getElementById('email-login' || 'email-signup');
+let password = document.getElementById('senha-login' || 'senha-signup');
 
-    const passwordValid = isPasswordValid();
-    document.getElementById("login-button").disabled = !emailValid || !passwordValid;
 
-}
 
-function isEmailValid() {
-    const email = document.getElementById("email").value;
-    if (!email) {
-        return false;
-    }
-    return validateEmail(email);
-}
+let form = document.querySelector('form');
 
-function isPasswordValid() {
-    const password = document.getElementById("password").value;
-    if (!password) {
-        return false;
-    }
-    return true;
-}
+form.addEventListener('submit', (e) => {
+    console.log(email.value);
+    console.log(password.value);
+    e.preventDefault()
 
-function validateEmail(email) {
-    return /\S+@\S+\.\S+/.test(email);
-}
+});
 
 
 
 
 
 
-const nomes = [
-    'Amarilis da Silva Soares',
-    'Ana Carollyna',
-    'Ana Luiza Fontes',
-    'Arthur Belarmino',
-    'Arthur de Aro Ramos',
-    'Beatriz Raika',
-    'Brenda Borges Diniz',
-    'Brenno Ferreira',
-    'Bruna Gomes',
-    ' Caio Agostinho Ramos',
-    ' Cecília de Souza',
-    ' Felipe Santana',
-    ' Gabriel Araujo Lima',
-    ' Gisela Deodata',
-    ' Giovanna Sá Fajardo',
-    ' Guilherme Alves Mauricio',
-    ' Guilherme Messa Cazarini',
-    ' Júlia dos Santos Tito',
-    ' Juliana Nunes',
-    ' Jullya Passos Maldonado',
-    ' Matheus Nunes Fialho',
-    ' Matheus Oliveira Amorim',
-    ' Matheus Oliveira de Moraes',
-    ' Rafaela Sousa',
-    ' Samyra Vitória Duarte',
-    ' Suyane de Oliveira'
-];
+
+
+
+
+
+// const nomes = 
+//     'Amarilis da Silva Soares',
+//     'Ana Carollyna',
+//     'Ana Luiza Fontes',
+//     'Arthur Belarmino',
+//     'Arthur de Aro Ramos',
+//     'Beatriz Raika',
+//     'Brenda Borges Diniz',
+//     'Brenno Ferreira',
+//     'Bruna Gomes',
+//     ' Caio Agostinho Ramos',
+//     ' Cecília de Souza',
+//     ' Felipe Santana',
+//     ' Gabriel Araujo Lima',
+//     ' Gisela Deodata',
+//     ' Giovanna Sá Fajardo',
+//     ' Guilherme Alves Mauricio',
+//     ' Guilherme Messa Cazarini',
+//     ' Júlia dos Santos Tito',
+//     ' Juliana Nunes',
+//     ' Jullya Passos Maldonado',
+//     ' Matheus Nunes Fialho',
+//     ' Matheus Oliveira Amorim',
+//     ' Matheus Oliveira de Moraes',
+//     ' Rafaela Sousa',
+//     ' Samyra Vitória Duarte',
+//     ' Suyane de Oliveira'
+// ];
 
 let intervalo;
 

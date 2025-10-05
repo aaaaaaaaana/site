@@ -65,37 +65,47 @@
 
     </header>
 
-    <main class="section-padding">
-        <h1>Nosso Diário de Bordo!</h1>
-        <h1 class="section-title">Realizar Sorteio!</h1>
-        <section class="content-wrapper">
-            <h2>O próximo a ser escolhido!</h2>
-            <p>Utilize o botão abaixo para sortear um participante da lista. Cada participante será sorteado apenas uma vez.</p>
+    <main>
+        <section id="sorteio">
 
-            <hr style="margin: 40px 0;">
+            <div id="center">
 
-            <div class="sorteio">
-                <div class="sorteio-resultado-box">
-                    <p>Clique em "Sortear" para aparecer o nome!</p>
+                <h1 class="title-center">Nosso Diário de Bordo!</h1>
+                <h1 class="section-title">Realizar Sorteio!</h1>
+
+
+                <p class="description">Utilize o botão abaixo para sortear um participante da lista. Cada participante
+                    será
+                    sorteado apenas uma
+                    vez.</p>
+
+                <div class="card-sorteio">HOVER</div>
+
+
+
+                <div class="sorteio-card">
+
+                    <div class="sorteio-buttons">
+                        
+                        <button type="button" class="btn-default" id="btnSortear">Sortear</button>
+                        <button type="button" class="btn-default" id="btnReiniciar">Reiniciar</button>
+                    </div>
+
+                    <hr style="margin: 40px 0;">
+
+                    <div class="participantes-inscritos" style="margin-top: 40px;">
+                        <h3>Participantes Adicionados (<span id="numParticipantes">0</span>):</h3>
+                        <ul id="listaParticipantes" class="participant-list">
+
+                        </ul>
+                        <h3>Participantes Já Sorteados:</h3>
+                        <ul id="listaSorteados" class="participant-list sorted">
+
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="sorteio-buttons">
-                    <button type="button" class="btn-default" id="btnSortear">Sortear</button>
-                    <button type="button" class="btn-default" id="btnReiniciar">Reiniciar</button>
-                </div>
-
-                <div class="participantes-inscritos" style="margin-top: 40px;">
-                    <h3>Participantes Adicionados (<span id="numParticipantes">0</span>):</h3>
-                    <ul id="listaParticipantes" class="participant-list">
-
-                    </ul>
-                    <h3>Participantes Já Sorteados:</h3>
-                    <ul id="listaSorteados" class="participant-list sorted">
-
-                    </ul>
-                </div>
-            </div>
         </section>
+        </div>
     </main>
 
     <footer>
