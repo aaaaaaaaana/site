@@ -1,0 +1,66 @@
+
+
+
+
+#sobre {
+    min-height: calc(100vh - 91px);
+    display: flex;
+    gap: 28px;
+    margin-bottom: 10%;
+}
+
+.shape-sobre {
+    background-color: var(--color-primary-7);
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    border-radius: 100% 30% 0% 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nos {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 5%;
+}
+
+
+#banner-sobre img {
+    height: 50%;
+    width: 50%;
+    border-radius: 100% 30% 0% 100%;
+}
+
+
+
+
+@media screen and (max-width: 1170px) {
+    #sobre {
+        min-height: 100%;
+        padding-top: 0px;
+    }
+
+    #banner,
+    #banner img,
+    #home .shape,
+    #brasil .shape-brasil  {
+        display: none;
+    }
+
+    #cta,
+    #br {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #phone_button button {
+        display: none;
+    }
+}
