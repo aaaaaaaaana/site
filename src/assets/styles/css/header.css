@@ -2,7 +2,7 @@
 
 header {
     width: 100%;
-    padding: 22px 2%;
+    padding: 19px 2%;
     position: sticky;
     top: 0;
     background-color: var(--color-primary-1);
@@ -18,7 +18,8 @@ header {
 
 #nav_logo {
     display: flex;
-    font-size: 20px;
+    width: 7%;
+    height: 7%;
     color: var(--color-primary-4);
 }
 
@@ -90,6 +91,12 @@ header {
     #navbar .btn-default {
         display: none;
     }
+
+    #nav_logo{
+        width: 20%;
+        height: 20%;
+    }
+
 
     #mobile_btn {
         display: block;
