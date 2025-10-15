@@ -5,8 +5,8 @@
 #sobre {
     min-height: calc(100vh - 91px);
     display: flex;
-    gap: 28px;
-    margin-bottom: 10%;
+    position: relative;
+    padding: 0 5%;
 }
 
 .shape-sobre {
@@ -29,10 +29,22 @@
 }
 
 
+#banner-sobre {
+    display: flex;
+    align-items: start;
+    justify-content: flex-end;
+    width: 80%;
+    z-index: 2;
+    overflow: hidden;
+    position: relative;
+    border-radius: 100% 30% 0% 100% / 100% 30% 0% 100%; 
+}
+
 #banner-sobre img {
     height: 50%;
-    width: 50%;
-    border-radius: 100% 30% 0% 100%;
+    width: fit-content;
+    object-fit: cover;
+
 }
 
 
@@ -44,15 +56,13 @@
         padding-top: 0px;
     }
 
-    #banner,
-    #banner img,
-    #home .shape,
-    #brasil .shape-brasil  {
+    #banner-sobre,
+    #banner-sobre img,
+    #sobre .shape-sobre  {
         display: none;
     }
 
-    #cta,
-    #br {
+    #nos {
         width: 100%;
         text-align: center;
         align-items: center;

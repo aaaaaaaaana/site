@@ -1,8 +1,12 @@
 
 
 footer {
-    background-color: var(--color-primary-2);
+    background: linear-gradient(to top, #2F86A6, #6A951F); 
     margin-top: 5%;
+}
+
+footer .img {
+    object-fit: cover;
 }
 
 #footer_items {

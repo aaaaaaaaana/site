@@ -30,11 +30,17 @@ header {
     gap: 48px;
 }
 
+.nav-item {
+    position: relative;
+}
+
 
 .nav-item a {
     text-decoration: none;
     color: #1d1d1dad;
     font-weight: 600;
+    display: block;
+    padding: 5px 0;
 }
 
 .nav-item a:hover {
@@ -43,11 +49,55 @@ header {
     font-weight: 600;
 }
 
-
 .nav-item.active a {
     color: var(--color-neutral-1);
     border-bottom: 3px solid var(--color-primary-2);
 }
+
+
+
+.nav-menu li {
+    padding: 8px 15px;
+}
+
+.nav-menu {
+    display: none; 
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: var(--color-primary-1); 
+    list-style: none;
+    padding: 10px 0;
+    min-width: 150px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.nav-menu a {
+    color: #1d1d1dad; 
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+}
+
+.nav-menu a:hover {
+    color: var(--color-primary-7);
+    
+}
+
+.nav-item.active:hover .nav-menu {
+    display: block;
+}
+
+
+.nav-item:hover .nav-menu {
+    display: block;
+}
+
+
+
+
 
 #mobile_btn {
     display: none;
