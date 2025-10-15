@@ -3,6 +3,9 @@
 footer {
     background: linear-gradient(to top, #2F86A6, #6A951F); 
     margin-top: 5%;
+    position: absolute;
+    bottom:0%;
+    width: 100%;
 }
 
 footer .img {
