@@ -7,6 +7,11 @@ $(document).ready(function () {
         $('#mobile_btn').find('i').toggleClass('fa-bars fa-xmark');
     });
 
+
+
+
+
+
     // const sections = $('section');
     // const navItems = $('.nav-item');
 
@@ -45,7 +50,13 @@ $(document).ready(function () {
         distance: '20%'
     });
 
-    ScrollReveal().reveal('#sobre', {
+    ScrollReveal().reveal('#br', {
+        origin: 'right',
+        duration: 2000,
+        distance: '20%'
+    });
+
+    ScrollReveal().reveal('#nos', {
         origin: 'right',
         duration: 2000,
         distance: '20%'
@@ -57,13 +68,13 @@ $(document).ready(function () {
         distance: '20%'
     });
 
-    ScrollReveal().reveal('#testimonial_chef', {
+    ScrollReveal().reveal('#contato', {
         origin: 'left',
         duration: 1000,
         distance: '20%'
     })
 
-    ScrollReveal().reveal('.feedback', {
+    ScrollReveal().reveal('#sorteio', {
         origin: 'right',
         duration: 1000,
         distance: '20%'
@@ -73,38 +84,58 @@ $(document).ready(function () {
 
 
 
-    
-    const participantes = [ 
-        "Amarilis da Silva Soares",
-        "Ana Carollyna",
-        "Ana Luiza Fontes",
-        "Arthur Belarmino",
-        "Arthur de Aro Ramos",
-        "Beatriz Raika",
+
+    const participantes = [
+        " Adailton Arcanjo Dos Santos",
+        "Amarilis Da Silva Soares",
+        "Ana Carollyna Rodrigues Santana",
+        "Ana Luiza Fontes Franco",
+        "Arthur De Aro Ramos",
+        "Arthur Viana Belarmino",
+        "Beatriz Raika De Oliveira Teixeira",
         "Brenda Borges Diniz",
-        "Brenno Ferreira",
-        "Bruna Gomes",
+        "Brenda De Carvalho Lima",
+        "Brenno Ferreira Cunha",
+        "Bruna Gomes Fogaca",
         "Caio Agostinho Ramos",
-        "Cecília de Souza",
-        "Felipe Santana",
+        "Caroline Aparecida Tavares Ferreira",
+        "Caua Dos Santos Farias",
+        "Cecilia De Souza",
+        "Daniel Carvalho Dos Anjos",
+        "Eduarda Coelho De Almeida",
+        "Felipe Santana Da Silva De Morais",
         "Gabriel Araujo Lima",
-        "Gisela Deodata",
-        "Giovanna Sá Fajardo",
+        "Gabriel Lima Parmagnani",
+        "Gabriel Rodrigues De Oliveira",
+        "Gabriely Pereira Serafim",
+        "Giovanna Sa Fajardo",
+        "Gisela Deodata De Almeida",
         "Guilherme Alves Mauricio",
+        "Guilherme Figueira Emiliano Da Silva",
         "Guilherme Messa Cazarini",
-        "Júlia dos Santos Tito",
-        "Juliana Nunes",
+        "Igor Da Silva Stempliuc",
+        "Isaias Batista Maciel",
+        "Joice Da Silva Martins Correa",
+        "Jose Alvaro Ferreira Dos Santos",
+        "Julia Dos Santos Tito",
+        "Juliana Nunes Braz Da Silva",
         "Jullya Passos Maldonado",
-        "Matheus Nunes Fialho",
+        "Leonardo Carvalho Alves De Lima",
+        "Marina Bispo Dos Santos",
         "Matheus Oliveira Amorim",
-        "Matheus Oliveira de Moraes",
-        "Rafaela Sousa",
-        "Samyra Vitória Duarte",
-        "Suyane de Oliveira"
+        "Matheus Oliveira De Moraes",
+        "Matheus Rodrigues Crispim",
+        "Miguel Ferreira Oliveira",
+        "Pablo Enrique Gualberto Paiao",
+        "Pedro Henrique Nascimento Teodozio",
+        "Rafaela Sousa Dos Santos",
+        "Samyra Vitoria Duarte Furlan Da Silva",
+        "Suyane De Oliveira Santos",
+        "Taina Ferreira Melo De Oliveir"
     ];
 
-    let participantesDisponiveis = []; 
-    let participantesSorteados = [];   
+    let participantesDisponiveis = [];
+    let participantesSorteados = [];
 
     const sorterCard = document.getElementById('sorterCard');
     const btnSortear = document.getElementById('btnSortear');
@@ -138,8 +169,10 @@ $(document).ready(function () {
             participantesDisponiveis = [...participantes];
             participantesSorteados = [];
         }
-        atualizarListas(); 
+        atualizarListas();
     }
+
+
 
     function atualizarListas() {
         listaParticipantesUl.innerHTML = '';
@@ -170,9 +203,9 @@ $(document).ready(function () {
         }
 
         if (!sorteando && participantesDisponiveis.length > 0 && !sorterCard.classList.contains('revealed')) {
-             sorterCard.textContent = 'SORTEIO!';
+            sorterCard.textContent = 'SORTEIO!';
         } else if (!sorteando && participantesDisponiveis.length === 0) {
-             sorterCard.textContent = 'Sem participantes!';
+            sorterCard.textContent = 'Sem participantes!';
         }
     }
 
@@ -194,45 +227,45 @@ $(document).ready(function () {
 
 
     function iniciarSorteio() {
-    if (sorteando || participantesDisponiveis.length === 0) return;
+        if (sorteando || participantesDisponiveis.length === 0) return;
 
-    sorteando = true;
-    btnSortear.disabled = true;
-    btnReiniciar.disabled = true;
+        sorteando = true;
+        btnSortear.disabled = true;
+        btnReiniciar.disabled = true;
 
-    sorterCard.classList.remove('revealed');
-    sorterCard.style.setProperty('--revealed-name', '""');
-    sorterCard.textContent = 'Sorteando...';
+        sorterCard.classList.remove('revealed');
+        sorterCard.style.setProperty('--revealed-name', '""');
+        sorterCard.textContent = 'Sorteando...';
 
-    const nomeVencedor = participantesDisponiveis[Math.floor(Math.random() * participantesDisponiveis.length)];
-    console.log("O vencedor será: ", nomeVencedor);
+        const nomeVencedor = participantesDisponiveis[Math.floor(Math.random() * participantesDisponiveis.length)];
+        console.log("O vencedor será: ", nomeVencedor);
 
-    let startTime = Date.now();
-    let duration = 6000; 
-    let baseInterval = 50; 
-    currentIndex = Math.floor(Math.random() * participantesDisponiveis.length); 
+        let startTime = Date.now();
+        let duration = 6000;
+        let baseInterval = 50;
+        currentIndex = Math.floor(Math.random() * participantesDisponiveis.length);
 
-    function animateRoll() {
-        const elapsed = Date.now() - startTime;
+        function animateRoll() {
+            const elapsed = Date.now() - startTime;
 
-        if (elapsed >= duration) {
-            finalizarSorteio(nomeVencedor);
-            return;
+            if (elapsed >= duration) {
+                finalizarSorteio(nomeVencedor);
+                return;
+            }
+
+            if (participantesDisponiveis.length > 0) {
+                currentIndex = (currentIndex + 1) % participantesDisponiveis.length;
+                sorterCard.textContent = participantesDisponiveis[currentIndex];
+            }
+
+
+            let currentDelay = baseInterval + Math.pow((elapsed / duration), 2) * 400;
+
+            intervalId = setTimeout(animateRoll, currentDelay);
         }
 
-        if (participantesDisponiveis.length > 0) {
-            currentIndex = (currentIndex + 1) % participantesDisponiveis.length;
-            sorterCard.textContent = participantesDisponiveis[currentIndex];
-        }
-
-
-        let currentDelay = baseInterval + Math.pow((elapsed / duration), 2) * 400;
-
-        intervalId = setTimeout(animateRoll, currentDelay);
+        animateRoll();
     }
-
-    animateRoll();
-}
 
     function finalizarSorteio(nomeSorteado) {
 
@@ -242,7 +275,7 @@ $(document).ready(function () {
         btnReiniciar.disabled = false;
 
 
-        sorterCard.textContent = ''; 
+        sorterCard.textContent = '';
 
 
         const indexParaRemover = participantesDisponiveis.indexOf(nomeSorteado);
@@ -255,7 +288,7 @@ $(document).ready(function () {
         sorterCard.style.setProperty('--revealed-name', `'${nomeSorteado}'`);
 
         criarConfete();
-        salvarEstadoSorteio(); 
+        salvarEstadoSorteio();
         atualizarListas();
     }
 
@@ -264,8 +297,8 @@ $(document).ready(function () {
 
         participantesDisponiveis = [...participantes];
         participantesSorteados = [];
-        localStorage.removeItem('participantesDisponiveis'); 
-        localStorage.removeItem('participantesSorteados');   
+        localStorage.removeItem('participantesDisponiveis');
+        localStorage.removeItem('participantesSorteados');
 
         sorterCard.classList.remove('revealed');
         sorterCard.style.setProperty('--revealed-name', '""');
@@ -280,6 +313,21 @@ $(document).ready(function () {
     carregarEstadoSorteio();
 
 });
+
+
+function instagram() {
+    window.location.href = 'https://www.instagram.com/brasilincena_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==';
+}
+
+function tiktok() {
+    window.location.href = 'https://www.tiktok.com/@brasilincena_?is_from_webapp=1&sender_device=pc';
+}
+
+
+function gmail() {
+    window.location.href = 'https://mail.google.com/mail/u/0/#inbox?compose=CllgCHrgClgrtQBgPlqbFkdxhKqFgHLVzdbWpdZXmWZtBMCzKzFMsCSLjJpgqQQVBNNLgklsnhL';
+}
+
 
 
 

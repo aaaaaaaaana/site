@@ -136,10 +136,11 @@
 
 
 
-button {
+
+.sorteio-card button {
   --button_radius: 0.75em;
-  --button_color: #e8e8e8;
-  --button_outline_color: #000000;
+  --button_color: var(--color-primary-6);
+  --button_outline_color: var(--color-primary-3);
   font-size: 17px;
   font-weight: bold;
   border: none;
@@ -155,7 +156,7 @@ button {
   border-radius: var(--button_radius);
   padding: 0.75em 1.5em;
   background: var(--button_color);
-  color: var(--button_outline_color);
+  color: var(--color-neutral-0);
   transform: translateY(-0.2em);
   transition: transform 0.1s ease;
 }
@@ -167,6 +168,7 @@ button:hover .button_top {
 button:active .button_top {
   transform: translateY(0);
 }
+
 
 
 
@@ -231,3 +233,6 @@ button:active .button_top {
     opacity: 0;
   }
 }
+
+
+

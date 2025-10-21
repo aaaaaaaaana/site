@@ -9,6 +9,7 @@
 @import url('diario.css');
 @import url('login.css');
 @import url('contato.css');
+@import url('sul.css');
 
 :root {
     --color-primary-1: #f3f8ec;
@@ -152,7 +153,7 @@ section {
 
 .title-center {
     margin-bottom: 4%;
-    font-size: 4rem;
+    font-size: 3.5rem;
     white-space: pre-line;
     text-align: center;
 }
@@ -164,7 +165,7 @@ section {
 }
 
 .description {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: justify;
 }
 
